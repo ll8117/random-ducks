@@ -71,7 +71,7 @@ set.seed(123)
 monte_carlo(n = 4, trials = 50000)
 ```
 
-The simulated result align with our calculation.
+The simulated result aligns with our calculation.
 
 Here we visualize the convergence of probability as the # of trials increases:
 
@@ -79,7 +79,7 @@ Here we visualize the convergence of probability as the # of trials increases:
 source("../src/conv_by_trials.r")
 ```
 
-And the probability decrease when there are more ducks fall into the circle:
+And the probability decreases when there are more ducks fall into the circle:
 
 ```{r prob_by_numb}
 source("../src/prob_by_numb.r")

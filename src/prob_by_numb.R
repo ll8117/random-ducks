@@ -16,7 +16,7 @@ for (i in 1:max_n) {
 # 绘图
 plot(1:max_n, prob_n, type="b", pch=16, col="darkgreen", lwd=2,
      xlab="# of Ducks", ylab="Probability",
-     main="Probability Decrease by the # of Ducks")
+     main="Probability Decreases by the # of Ducks")
 lines(1:max_n, theory_prob, col="red", lty=2, lwd=2)  # 理论概率虚线
 legend("topright", legend=c("Monte Carlo", "Theoretical Probability"),
        col=c("darkgreen","red"), lty=c(1,2), lwd=2)

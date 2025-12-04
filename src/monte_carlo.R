@@ -1,5 +1,5 @@
 # monte_carlo.R
-source("utils.R")
+# source("utils.R")
 
 monte_carlo <- function(n = 4, trials = 10000){
     count <- 0

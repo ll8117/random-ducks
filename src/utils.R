@@ -18,5 +18,5 @@ in_same_semicircle <- function(points){
     for (i in 1:nrow(points)){
         if ((angles[i + nrow(points) - 1] - angles[i]) <= pi) return(TRUE)
     }
-    return FALSE
+    return(FALSE)
 }

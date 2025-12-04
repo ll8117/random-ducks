@@ -1,8 +1,32 @@
 ---
-title: "Random Ducks Report"
+title: "Random Ducks in a Circle"
 author: "Lyle Liu"
 date: "`r Sys.Date()`"
 output: html_document
 ---
 
-knitr::opts_chunk$set(echo = TRUE)
+## Problem Description
+
+We investigate the probability that `n` ducks randomly placed in a circle happen to fall in a semicircle.
+
+## Theoretical Probability
+
+- For 4 ducks, convex quadrilateral ⇔ points not on same semicircle
+- For n ducks, convex polygon ⇔ points not in same semicircle (generalization)
+- Probability formula derivation...
+
+# Monte Carlo Simulation
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(envir = globalenv())
+```
+
+```{r load}
+source("../src/utils.r")
+source("../src/monte_carlo.r")
+```
+
+```{r monte carlo}
+set.seed(123)
+monte_carlo(n = 4, trials = 50000)
+```

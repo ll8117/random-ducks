@@ -1,0 +1,7 @@
+remote_theme: pages-themes/[email protected]
+plugins:
+  - jekyll-remote-theme
+# 可选：
+title: Ducky Project 
+description: Random ducks fall in a circle
+

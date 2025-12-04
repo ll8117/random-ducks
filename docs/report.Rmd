@@ -66,9 +66,17 @@ source("../src/utils.r")
 source("../src/monte_carlo.r")
 ```
 
-```{r monte carlo}
+```{r monte_carlo}
 set.seed(123)
 monte_carlo(n = 4, trials = 50000)
 ```
 
 The simulated result align with our calculation.
+
+```{r conv_by_trial}
+source("../src/conv_by_trials.r")
+```
+
+```{r prob_by_numb}
+source("../src/prob_by_numb.r")
+```

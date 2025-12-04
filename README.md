@@ -12,9 +12,9 @@ This is a small experiment in R and Python to study the probability that `n` duc
   > Contains problem description, theoretical derivation, and Monte Carlo simulation
 
 - `docs/report.html`  
-  > Knitted HTML report 🖥️ 
-  > [🔗 View full report here](https://ll8117.github.io/random-ducks/docs/report)
-  > [🔗 这里查看完整报告](https://ll8117.github.io/random-ducks/docs/report)
+  > Knitted HTML report 🖥️  
+  > [🔗 View full report here](https://ll8117.github.io/random-ducks/docs/report)  
+  > [🔗 这里查看完整报告](https://ll8117.github.io/random-ducks/docs/report)  
 
 - `src/utils.R`  
   > Utility functions 🔧  

@@ -9,13 +9,53 @@ output: html_document
 
 We investigate the probability that `n` ducks randomly placed in a circle happen to fall in a semicircle.
 
-## Theoretical Probability
+## Theoretical Proof via Event Approach
 
-- For 4 ducks, convex quadrilateral ⇔ points not on same semicircle
-- For n ducks, convex polygon ⇔ points not in same semicircle (generalization)
-- Probability formula derivation...
+Let us define events $A_i$ for $i = 1, \dots, n$ as follows:
+
+> $A_i$: all ducks fall in the semicircle whose left endpoint is at duck $i$.
+
+### Step 1: Probability of a single event
+
+By symmetry, each $A_i$ has the same probability:
+
+$$
+\Pr(A_i) = \frac{1}{2^{n-1}}.
+$$
+
+### Step 2: Mutual exclusivity of events
+
+To see that the events $A_i$ are mutually exclusive, note that:
+
+- A semicircle is defined by its leftmost duck.
+- If all ducks are contained in the semicircle starting at duck $i$, then **no other duck can serve as the left endpoint for a semicircle containing all ducks**.
+- Therefore, if $A_i$ occurs, none of the other $A_j$ ($j \neq i$) can occur simultaneously.
+
+Formally:
+
+$$
+A_i \cap A_j = \emptyset, \quad \forall i \neq j.
+$$
+
+### Step 3: Total probability
+
+Since the events are mutually exclusive, the probability that all ducks fall in some semicircle is:
+
+$$
+P_n = \Pr\left(\bigcup_{i=1}^{n} A_i \right) = \sum_{i=1}^{n} \Pr(A_i) = n \cdot \frac{1}{2^{n-1}}.
+$$
+
+Thus, the final theoretical result is:
+
+$$
+\boxed{P_n = \frac{n}{2^{n-1}}}.
+$$
 
 # Monte Carlo Simulation
+
+In four ducks case, as shown above the probability should be $\frac{1}{2}$.
+
+Here we simulate with 500000 trials:
 
 ```{r setup, include=FALSE}
 knitr::opts_knit$set(envir = globalenv())
@@ -30,3 +70,5 @@ source("../src/monte_carlo.r")
 set.seed(123)
 monte_carlo(n = 4, trials = 50000)
 ```
+
+The simulated result align with our calculation.

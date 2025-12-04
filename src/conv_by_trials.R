@@ -18,9 +18,10 @@ for (i in 1:trials) {
 
 # 绘图
 plot(1:trials, prob_trace, type="l", col="blue", lwd=2,
-     xlab="模拟次数", ylab="累积概率",
-     main=paste(n, "只鸭子落在半圆内的概率收敛"))
+     xlab="# of Trials", ylab="Probabilty",
+     ylim=c(0, 1),
+     main=paste("The Probability of", n, "Ducks Fall into One Semicircle Converges"))
 abline(h = n*2^(-n+1), col="red", lty=2)  # 理论概率
-legend("topright", legend=c("Monte Carlo", "理论值"),
+legend("topright", legend=c("Monte Carlo", "Theoretical Probability"),
        col=c("blue","red"), lty=c(1,2), lwd=2)
 

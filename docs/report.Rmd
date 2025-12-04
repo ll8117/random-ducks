@@ -73,9 +73,13 @@ monte_carlo(n = 4, trials = 50000)
 
 The simulated result align with our calculation.
 
+Here we visualize the convergence of probability as the # of trials increases:
+
 ```{r conv_by_trial}
 source("../src/conv_by_trials.r")
 ```
+
+And the probability decrease when there are more ducks fall into the circle:
 
 ```{r prob_by_numb}
 source("../src/prob_by_numb.r")
